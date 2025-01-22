@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Oleo+Script+Swash+Caps:wght@400;700&family=Playwrite+DE+Grund:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #efeef5;
+    transition: background-color 0.9s ease, color 0.9s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #181732;
+    color: #ffffff;
+}
+
+/* Dark mode specific styles for the clock */
+body.dark-mode .clock {
+    border: none;
+}
+
+/* Icon in the button */
+.mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    left: 150px;
+    bottom: 20px;
+    transition: transform 0.5s ease;
+}
+body.dark-mode .mode-toggle {
+    transform: rotate(180deg); /* Rotate the icon in dark mode */
+}
+.timezone-selector label {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+.other-time {
+    display: flex;
+    justify-content:space-between;
+    background-color: #181732;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+body.dark-mode .other-time {
+    background-image: linear-gradient(to right, #dbd2fb, #fdfdff, #dbd2fb);
+    color: #181732;
+}
+span#loaction {
+    font-size: 14px;
+    line-height: 24px;
+    word-break: break-word;
+    max-width: 115px;
+    text-align: left;
+}
+span#otherTime {
+    font-size: 20px;
+}
+select#timezone {
+    max-width: 270px;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #181732;
+    border-radius: 10px;
+    outline: none;
+    background-image: linear-gradient(to right, #dbd2fb, #fdfdff, #dbd2fb);
+}
+.container {
+    text-align: center;
+}
+
+.clock {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6c67bf;
+    z-index: 2;
+}
+
+.marker {
+    position: absolute;
+    transform: rotate(var(--rotation)) translateY(-119px);
+    font-size: 12px;
+    color: #8f8e8e;
+    font-weight: bold;
+}
+
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+
+/* Digital Time and Date Styles */
+
+.digital-time #time{
+    font-weight: bold;
+    color: #181732;
+    font-size: 36px;
+}
+.digital-time #time_between{
+    font-size: 16px;
+    padding-left: 8px;
+    color: #181732;
+    font-weight: bold;
+}
+
+
+.digital-time #date {
+    font-size: 16px;
+    color: #717277;
+}
+body.dark-mode .digital-time #time, 
+body.dark-mode .digital-time #time_between{
+    color: #ffffff;
+}
+
+
+
