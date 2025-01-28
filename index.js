@@ -92,7 +92,7 @@ $(document).ready(function () {
             hour12: true 
         });
 
-        $('#loaction').html(`${timezone}</br>${date}`);
+        $('#location').html(`${timezone}</br>${date}`);
         $('#otherTime').html(`${times}`);
         
 

@@ -64,7 +64,7 @@ body.dark-mode .other-time {
     background-image: linear-gradient(to right, #dbd2fb, #fdfdff, #dbd2fb);
     color: #181732;
 }
-span#loaction {
+span#location {
     font-size: 14px;
     line-height: 24px;
     word-break: break-word;
